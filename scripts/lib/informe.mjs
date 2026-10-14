@@ -51,9 +51,16 @@ export function construirModelo(h) {
     'La API de Google Places devuelve como máximo 10 fotos por ficha; la regla de fotos se calibra con ese tope.',
     'No se evalúan los horarios especiales o festivos: la API solo informa de los próximos 7 días y el resultado dependería de la fecha de extracción.',
     'Las reglas de nombre y categoría solo se aplican a marcas con al menos 3 locales evaluados.',
+    'Si los nombres de una marca no comparten un patrón común (cada local tiene un nombre propio), la comparación de nombres solo mira el separador.',
     'La API de Google Places no expone la descripción que escribe el propietario de la ficha (solo un resumen editorial de Google), por lo que no se evalúa.',
     'Un dato no disponible nunca se evalúa ni se infiere.',
     'No se han analizado reseñas, competencia ni la web corporativa.',
+  ];
+
+  const siguientesPasos = [
+    'Repetir la auditoría cada mes para comprobar si las correcciones surten efecto.',
+    'Ampliarla con las reseñas públicas, para sumar lo que dicen los clientes.',
+    'Con acceso de solo lectura a los perfiles de Google Business, revisar lo que no se ve desde fuera, como la descripción de cada ficha.',
   ];
 
   return {
@@ -69,8 +76,8 @@ export function construirModelo(h) {
       tramos: h.tramos ?? {},
       limitaciones,
       fallos: h.fallos ?? [],
-      noEvaluado: h.no_evaluado ?? [],
     },
+    siguientesPasos,
   };
 }
 
@@ -160,9 +167,6 @@ ${l.estado === 'sin_datos' ? '<td data-v="">sin datos</td>' : `<td data-v="${l.s
   const fallos = me.fallos.length
     ? `<p>Fallos de extracción (${me.fallos.length}): ${me.fallos.map(f => `${esc(f.local_id)} (${esc(f.motivo)})`).join('; ')}.</p>`
     : '<p>Fallos de extracción: ninguno.</p>';
-  const noEval = me.noEvaluado.length
-    ? `<p>Reglas no evaluadas: ${me.noEvaluado.map(n => `${esc(etiqueta(n.regla))} en ${esc(n.marca)} (${esc(n.motivo)})`).join('; ')}.</p>`
-    : '';
 
   return `<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -191,7 +195,9 @@ ${detalle || '<p class="mut">No hay hallazgos que detallar.</p>'}
 <ul>${me.limitaciones.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
 ${r.nSinDatos ? `<p>Locales sin datos (no evaluados): ${r.nSinDatos}.</p>` : ''}
 ${fallos}
-${noEval}
+</section>
+<section data-testid="informe-siguientes-pasos"><h2>Siguientes pasos</h2>
+<ul>${m.siguientesPasos.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
 </section>
 </main>
 <script>${SCRIPT}</script>

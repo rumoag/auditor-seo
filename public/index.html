@@ -141,10 +141,12 @@ ul.hall{margin:.4em 0 .4em 1em;padding:0}
 <section data-testid="informe-metodologia"><h2>Metodología y limitaciones</h2>
 <p>Fuente: Google Places API (New). Fecha de extracción: 14/10/2026. Solo datos públicos de las fichas; no se han usado datos internos ni se ha modificado ninguna ficha.</p>
 <p>Score = 100 − suma de pesos por hallazgo (alta 15, media 7, baja 3), con mínimo 0. Tramos: verde desde 80, ámbar desde 50, rojo por debajo.</p>
-<ul><li>La API de Google Places devuelve como máximo 10 fotos por ficha; la regla de fotos se calibra con ese tope.</li><li>No se evalúan los horarios especiales o festivos: la API solo informa de los próximos 7 días y el resultado dependería de la fecha de extracción.</li><li>Las reglas de nombre y categoría solo se aplican a marcas con al menos 3 locales evaluados.</li><li>La API de Google Places no expone la descripción que escribe el propietario de la ficha (solo un resumen editorial de Google), por lo que no se evalúa.</li><li>Un dato no disponible nunca se evalúa ni se infiere.</li><li>No se han analizado reseñas, competencia ni la web corporativa.</li></ul>
+<ul><li>La API de Google Places devuelve como máximo 10 fotos por ficha; la regla de fotos se calibra con ese tope.</li><li>No se evalúan los horarios especiales o festivos: la API solo informa de los próximos 7 días y el resultado dependería de la fecha de extracción.</li><li>Las reglas de nombre y categoría solo se aplican a marcas con al menos 3 locales evaluados.</li><li>Si los nombres de una marca no comparten un patrón común (cada local tiene un nombre propio), la comparación de nombres solo mira el separador.</li><li>La API de Google Places no expone la descripción que escribe el propietario de la ficha (solo un resumen editorial de Google), por lo que no se evalúa.</li><li>Un dato no disponible nunca se evalúa ni se infiere.</li><li>No se han analizado reseñas, competencia ni la web corporativa.</li></ul>
 
 <p>Fallos de extracción: ninguno.</p>
-<p>Reglas no evaluadas: Nombre inconsistente dentro de la marca en Voltereta (empate en el patrón de nombre dominante); Nombre inconsistente dentro de la marca en Begin (empate en el patrón de nombre dominante); Nombre inconsistente dentro de la marca en One Burger (la marca tiene 1 locales evaluados (mínimo 3)); Categoría distinta dentro de la marca en One Burger (la marca tiene 1 locales evaluados (mínimo 3)).</p>
+</section>
+<section data-testid="informe-siguientes-pasos"><h2>Siguientes pasos</h2>
+<ul><li>Repetir la auditoría cada mes para comprobar si las correcciones surten efecto.</li><li>Ampliarla con las reseñas públicas, para sumar lo que dicen los clientes.</li><li>Con acceso de solo lectura a los perfiles de Google Business, revisar lo que no se ve desde fuera, como la descripción de cada ficha.</li></ul>
 </section>
 </main>
 <script>

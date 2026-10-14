@@ -101,8 +101,19 @@ test('la metodología declara fuente, fecha, pesos, tope de fotos, horarios espe
   assert.match(sec, /horarios especiales/);
   assert.match(sec, /no expone la descripción que escribe el propietario/);
   assert.match(sec, /Fallos de extracción \(1\)/);
-  assert.match(sec, /Reglas no evaluadas/);
+  assert.doesNotMatch(sec, /Reglas no evaluadas/);
+  assert.match(sec, /solo mira el separador/);
   assert.match(sec, /reseñas, competencia ni la web corporativa/);
+});
+
+test('el informe termina con la sección de siguientes pasos, sin reglas no evaluadas', () => {
+  assert.match(html, /data-testid="informe-siguientes-pasos"><h2>Siguientes pasos<\/h2>/);
+  const pasos = html.slice(html.indexOf('informe-siguientes-pasos'));
+  assert.match(pasos, /Repetir la auditoría cada mes/);
+  assert.match(pasos, /reseñas públicas/);
+  assert.match(pasos, /acceso de solo lectura a los perfiles de Google Business/);
+  assert.ok(html.indexOf('informe-metodologia') < html.indexOf('informe-siguientes-pasos'));
+  assert.doesNotMatch(html, /Reglas no evaluadas/);
 });
 
 test('la tabla incluye los data-testid y el orden inicial es peores primero', () => {

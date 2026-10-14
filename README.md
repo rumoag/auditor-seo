@@ -9,7 +9,7 @@ Proyecto independiente y de solo lectura, construido con datos públicos. No est
 1. **Inventario**: lista de locales (`data/locales.json`) tomada de las webs oficiales y verificada a mano.
 2. **Extracción**: lee los datos públicos de cada ficha con la API oficial de Google Places (`data/fichas_raw.json`).
 3. **Reglas y score**: detecta problemas con evidencia y acción concreta (`data/hallazgos.json`) y puntúa cada local de 0 a 100.
-4. **Informe**: una página HTML autocontenida con resumen ejecutivo, top 5 acciones, tabla ordenable, detalle y metodología.
+4. **Informe**: una página HTML autocontenida con resumen ejecutivo, top 5 acciones, tabla ordenable, detalle, metodología y siguientes pasos.
 
 ## Cómo se ejecuta
 
