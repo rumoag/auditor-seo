@@ -3,5 +3,6 @@ node_modules/
 .env.*
 .vercel/
 entrega/
+data/fichas_raw.json
 data/hallazgos_demo.json
 data/informe_demo.html

@@ -203,7 +203,7 @@ test('vercel.json real sirve public/ sin build, el backlog existe y .gitignore p
   assert.deepEqual(JSON.parse(await readFile(join(app, 'vercel.json'), 'utf8')), { buildCommand: null, outputDirectory: 'public', framework: null });
   assert.match(await readFile(join(app, 'BACKLOG_FUTURO.md'), 'utf8'), /reseñas/i);
   const ig = (await readFile(join(app, '.gitignore'), 'utf8')).split(/\r?\n/);
-  for (const linea of ['.env', '.env.*', 'node_modules/', 'entrega/', '.vercel/']) assert.ok(ig.includes(linea), linea);
+  for (const linea of ['.env', '.env.*', 'node_modules/', 'entrega/', '.vercel/', 'data/fichas_raw.json']) assert.ok(ig.includes(linea), linea);
 });
 
 // Ejecutables

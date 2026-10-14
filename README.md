@@ -45,9 +45,9 @@ Antes de publicar: `npm run secretos`, `npm run entrega:comprobar` y `npm run en
 
 ## Qué se versiona
 
-Se versionan el código, las pruebas, el inventario (`data/locales.json`, `data/cifras_oficiales.json`), los resultados (`data/hallazgos.json`) y el informe publicado (`public/index.html`). Se ignoran las credenciales (`.env`), el borrador del mensaje de entrega (`entrega/`) y las salidas de demostración.
+Se versionan el código, las pruebas, el inventario (`data/locales.json`, `data/cifras_oficiales.json`), los resultados del análisis (`data/hallazgos.json`) y el informe publicado (`public/index.html`). Se ignoran las credenciales (`.env`), el borrador del mensaje de entrega (`entrega/`), las salidas de demostración y los datos crudos de Google (`data/fichas_raw.json`).
 
-`data/fichas_raw.json` contiene contenido copiado de Google Places. Los términos de Google limitan el almacenamiento de ese contenido, así que su publicación depende de una decisión del autor tras revisarlos: si se decide no publicarlo, se añade a `.gitignore` y el resto del flujo no cambia.
+`data/fichas_raw.json` contiene contenido copiado de Google Places y los términos de Google limitan su almacenamiento, así que **no se publica**. Para reproducir el análisis hay que generarlo con `npm run extract` y una clave propia; `data/hallazgos.json` y el informe sí se publican, porque son el resultado del análisis y no una copia de las fichas.
 
 ## Score y pesos
 

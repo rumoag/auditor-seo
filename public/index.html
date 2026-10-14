@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Auditor de SEO Local</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#555;--card:#f4f4f5;--line:#ddd;--ok:#1b7a3a;--warn:#9a6700;--bad:#b42318;--demo:#fff3cd}
+@media(prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--mut:#b5b5b5;--card:#1f1f22;--line:#333;--ok:#4cc277;--warn:#e3b341;--bad:#ff7b72;--demo:#4a3b00}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+main{max-width:960px;margin:0 auto;padding:16px}
+h1{margin:.4em 0}h2{margin-top:1.8em;border-bottom:1px solid var(--line);padding-bottom:.2em}
+.aviso{background:var(--demo);color:var(--fg);border:1px solid var(--warn);border-radius:6px;padding:8px 12px}
+.cifras{display:flex;gap:12px;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+.cifras li{flex:1 1 140px;background:var(--card);border-radius:8px;padding:12px}
+.cifras b{display:block;font-size:2rem;line-height:1.1}
+.mut,small{color:var(--mut)}
+.tabla{overflow-x:auto}
+table{border-collapse:collapse;width:100%}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th button{all:unset;cursor:pointer;font-weight:700}
+th button:focus-visible{outline:2px solid currentColor}
+.t-verde{color:var(--ok)}.t-ambar{color:var(--warn)}.t-rojo{color:var(--bad)}.t-verde,.t-ambar,.t-rojo{font-weight:700}
+details{border-bottom:1px solid var(--line);padding:6px 0}
+summary{cursor:pointer}
+ul.hall{margin:.4em 0 .4em 1em;padding:0}
+.sev{font-size:.8em;text-transform:uppercase;font-weight:700}
+</style></head>
+<body><main>
+<h1>Auditor de SEO Local</h1>
+
+<section data-testid="informe-resumen"><h2>Resumen ejecutivo</h2>
+<ul class="cifras">
+<li><b>16</b>locales analizados</li>
+<li><b>12</b>problemas accionables</li>
+<li><b>93/100</b>score medio</li>
+</ul>
+<p>El problema con mayor impacto es «Nombre inconsistente dentro de la marca», que afecta a 7 de 16 locales evaluados: Unificar el nombre con el formato dominante de la marca.</p>
+<p>0 locales están en rojo (score por debajo de 50) y 1 en ámbar; el de menor score es Voltereta Kioto | Valencia (78).</p>
+<p>Se han detectado 12 problemas accionables en 11 de 16 locales evaluados.</p>
+</section>
+<section data-testid="informe-top-acciones"><h2>Top 5 acciones</h2>
+<ol><li><b>Nombre inconsistente dentro de la marca</b> <small>(NOMENCLATURA_INCONSISTENTE)</small> — 7 locales, impacto 49. Unificar el nombre con el formato dominante de la marca.</li><li><b>Categoría distinta dentro de la marca</b> <small>(CATEGORIA_DISPAR)</small> — 2 locales, impacto 30. Alinear la categoría principal con la de la marca.</li><li><b>Teléfono ausente</b> <small>(TELEFONO_AUSENTE)</small> — 1 local, impacto 15. Añadir el teléfono del local.</li><li><b>Atributo declarado en la web pero sin marcar</b> <small>(ATRIBUTO_DESAPROVECHADO)</small> — 2 locales, impacto 14. Marcar el atributo &quot;terraza&quot; en la ficha.</li></ol>
+</section>
+<section data-testid="informe-tabla-locales"><h2>Locales</h2>
+<p class="mut"><small>Haz clic en una cabecera para ordenar. Orden inicial: peores primero.</small></p>
+<div class="tabla"><table><thead><tr><th scope="col"><button type="button" data-col="0" data-testid="informe-th-local">Local</button></th><th scope="col"><button type="button" data-col="1" data-testid="informe-th-marca">Marca</button></th><th scope="col"><button type="button" data-col="2" data-testid="informe-th-ciudad">Ciudad</button></th><th scope="col"><button type="button" data-col="3" data-testid="informe-th-score">Score</button></th><th scope="col"><button type="button" data-col="4" data-testid="informe-th-tramo">Tramo</button></th><th scope="col"><button type="button" data-col="5" data-testid="informe-th-problemas">Problemas</button></th></tr></thead><tbody><tr>
+<td data-v="Voltereta Kioto | Valencia">Voltereta Kioto | Valencia</td><td data-v="Voltereta">Voltereta</td><td data-v="Valencia">Valencia</td>
+<td data-v="78">78</td><td data-v="ambar"><span class="t-ambar">Ámbar</span></td><td data-v="2">2</td>
+</tr><tr>
+<td data-v="One Burger">One Burger</td><td data-v="One Burger">One Burger</td><td data-v="Valencia">Valencia</td>
+<td data-v="85">85</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="1">1</td>
+</tr><tr>
+<td data-v="Voltereta Toscana - Córdoba">Voltereta Toscana - Córdoba</td><td data-v="Voltereta">Voltereta</td><td data-v="Córdoba">Córdoba</td>
+<td data-v="85">85</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="1">1</td>
+</tr><tr>
+<td data-v="Begin Botánico | Sagunto">Begin Botánico | Sagunto</td><td data-v="Begin">Begin</td><td data-v="Sagunto">Sagunto</td>
+<td data-v="93">93</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="1">1</td>
+</tr><tr>
+<td data-v="Begin Huerta (Alameda)">Begin Huerta (Alameda)</td><td data-v="Begin">Begin</td><td data-v="Valencia">Valencia</td>
+<td data-v="93">93</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="1">1</td>
+</tr><tr>
+<td data-v="Begin Jungla | Gandía">Begin Jungla | Gandía</td><td data-v="Begin">Begin</td><td data-v="Gandía">Gandía</td>
+<td data-v="93">93</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="1">1</td>
+</tr><tr>
+<td data-v="Begin Profundidades Marinas - Valencia">Begin Profundidades Marinas - Valencia</td><td data-v="Begin">Begin</td><td data-v="Valencia">Valencia</td>
+<td data-v="93">93</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="1">1</td>
+</tr><tr>
+<td data-v="Voltereta Bali | Valencia">Voltereta Bali | Valencia</td><td data-v="Voltereta">Voltereta</td><td data-v="Valencia">Valencia</td>
+<td data-v="93">93</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="1">1</td>
+</tr><tr>
+<td data-v="Voltereta Casa | Valencia">Voltereta Casa | Valencia</td><td data-v="Voltereta">Voltereta</td><td data-v="Valencia">Valencia</td>
+<td data-v="93">93</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="1">1</td>
+</tr><tr>
+<td data-v="Voltereta Manhattan - Valencia">Voltereta Manhattan - Valencia</td><td data-v="Voltereta">Voltereta</td><td data-v="Valencia">Valencia</td>
+<td data-v="93">93</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="1">1</td>
+</tr><tr>
+<td data-v="Voltereta Nueva Zelanda">Voltereta Nueva Zelanda</td><td data-v="Voltereta">Voltereta</td><td data-v="Zaragoza">Zaragoza</td>
+<td data-v="93">93</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="1">1</td>
+</tr><tr>
+<td data-v="Begin Invernadero - Valencia">Begin Invernadero - Valencia</td><td data-v="Begin">Begin</td><td data-v="Valencia">Valencia</td>
+<td data-v="100">100</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="0">0</td>
+</tr><tr>
+<td data-v="Begin Jardín Secreto - Valencia">Begin Jardín Secreto - Valencia</td><td data-v="Begin">Begin</td><td data-v="Valencia">Valencia</td>
+<td data-v="100">100</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="0">0</td>
+</tr><tr>
+<td data-v="Begin Origen - Valencia">Begin Origen - Valencia</td><td data-v="Begin">Begin</td><td data-v="Valencia">Valencia</td>
+<td data-v="100">100</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="0">0</td>
+</tr><tr>
+<td data-v="Voltereta París - Sevilla">Voltereta París - Sevilla</td><td data-v="Voltereta">Voltereta</td><td data-v="Sevilla">Sevilla</td>
+<td data-v="100">100</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="0">0</td>
+</tr><tr>
+<td data-v="Voltereta Tanzania - Alicante">Voltereta Tanzania - Alicante</td><td data-v="Voltereta">Voltereta</td><td data-v="Alicante">Alicante</td>
+<td data-v="100">100</td><td data-v="verde"><span class="t-verde">Verde</span></td><td data-v="0">0</td>
+</tr></tbody></table></div>
+</section>
+<section data-testid="informe-detalle"><h2>Detalle de hallazgos</h2>
+<details data-testid="informe-detalle-voltereta-valencia-04">
+<summary>Voltereta Kioto | Valencia — score 78 <span class="t-ambar">(Ámbar)</span></summary>
+<ul class="hall"><li><span class="sev">media</span> <b>Nombre inconsistente dentro de la marca</b>: &quot;Voltereta Kioto | Valencia&quot; (separador dominante: &quot;-&quot;) → Unificar el nombre con el formato dominante de la marca</li><li><span class="sev">alta</span> <b>Categoría distinta dentro de la marca</b>: Categoría japanese_restaurant (dominante en Voltereta: fusion_restaurant) → Alinear la categoría principal con la de la marca</li></ul>
+</details>
+<details data-testid="informe-detalle-one-burger-valencia-01">
+<summary>One Burger — score 85 <span class="t-verde">(Verde)</span></summary>
+<ul class="hall"><li><span class="sev">alta</span> <b>Teléfono ausente</b>: Sin teléfono en la ficha → Añadir el teléfono del local</li></ul>
+</details>
+<details data-testid="informe-detalle-voltereta-cordoba-01">
+<summary>Voltereta Toscana - Córdoba — score 85 <span class="t-verde">(Verde)</span></summary>
+<ul class="hall"><li><span class="sev">alta</span> <b>Categoría distinta dentro de la marca</b>: Categoría italian_restaurant (dominante en Voltereta: fusion_restaurant) → Alinear la categoría principal con la de la marca</li></ul>
+</details>
+<details data-testid="informe-detalle-begin-sagunto-01">
+<summary>Begin Botánico | Sagunto — score 93 <span class="t-verde">(Verde)</span></summary>
+<ul class="hall"><li><span class="sev">media</span> <b>Nombre inconsistente dentro de la marca</b>: &quot;Begin Botánico | Sagunto&quot; (separador dominante: &quot;-&quot;) → Unificar el nombre con el formato dominante de la marca</li></ul>
+</details>
+<details data-testid="informe-detalle-begin-valencia-04">
+<summary>Begin Huerta (Alameda) — score 93 <span class="t-verde">(Verde)</span></summary>
+<ul class="hall"><li><span class="sev">media</span> <b>Nombre inconsistente dentro de la marca</b>: &quot;Begin Huerta (Alameda)&quot; (separador dominante: &quot;-&quot;) → Unificar el nombre con el formato dominante de la marca</li></ul>
+</details>
+<details data-testid="informe-detalle-begin-gandia-01">
+<summary>Begin Jungla | Gandía — score 93 <span class="t-verde">(Verde)</span></summary>
+<ul class="hall"><li><span class="sev">media</span> <b>Nombre inconsistente dentro de la marca</b>: &quot;Begin Jungla | Gandía&quot; (separador dominante: &quot;-&quot;) → Unificar el nombre con el formato dominante de la marca</li></ul>
+</details>
+<details data-testid="informe-detalle-begin-valencia-02">
+<summary>Begin Profundidades Marinas - Valencia — score 93 <span class="t-verde">(Verde)</span></summary>
+<ul class="hall"><li><span class="sev">media</span> <b>Atributo declarado en la web pero sin marcar</b>: La web declara &quot;terraza&quot; pero la ficha lo tiene marcado como no ofrecido → Marcar el atributo &quot;terraza&quot; en la ficha</li></ul>
+</details>
+<details data-testid="informe-detalle-voltereta-valencia-02">
+<summary>Voltereta Bali | Valencia — score 93 <span class="t-verde">(Verde)</span></summary>
+<ul class="hall"><li><span class="sev">media</span> <b>Nombre inconsistente dentro de la marca</b>: &quot;Voltereta Bali | Valencia&quot; (separador dominante: &quot;-&quot;) → Unificar el nombre con el formato dominante de la marca</li></ul>
+</details>
+<details data-testid="informe-detalle-voltereta-valencia-01">
+<summary>Voltereta Casa | Valencia — score 93 <span class="t-verde">(Verde)</span></summary>
+<ul class="hall"><li><span class="sev">media</span> <b>Nombre inconsistente dentro de la marca</b>: &quot;Voltereta Casa | Valencia&quot; (separador dominante: &quot;-&quot;) → Unificar el nombre con el formato dominante de la marca</li></ul>
+</details>
+<details data-testid="informe-detalle-voltereta-valencia-03">
+<summary>Voltereta Manhattan - Valencia — score 93 <span class="t-verde">(Verde)</span></summary>
+<ul class="hall"><li><span class="sev">media</span> <b>Atributo declarado en la web pero sin marcar</b>: La web declara &quot;terraza&quot; pero la ficha lo tiene marcado como no ofrecido → Marcar el atributo &quot;terraza&quot; en la ficha</li></ul>
+</details>
+<details data-testid="informe-detalle-voltereta-zaragoza-01">
+<summary>Voltereta Nueva Zelanda — score 93 <span class="t-verde">(Verde)</span></summary>
+<ul class="hall"><li><span class="sev">media</span> <b>Nombre inconsistente dentro de la marca</b>: &quot;Voltereta Nueva Zelanda&quot; (separador dominante: &quot;-&quot;) → Unificar el nombre con el formato dominante de la marca</li></ul>
+</details>
+</section>
+<section data-testid="informe-metodologia"><h2>Metodología y limitaciones</h2>
+<p>Fuente: Google Places API (New). Fecha de extracción: 14/10/2026. Solo datos públicos de las fichas; no se han usado datos internos ni se ha modificado ninguna ficha.</p>
+<p>Score = 100 − suma de pesos por hallazgo (alta 15, media 7, baja 3), con mínimo 0. Tramos: verde desde 80, ámbar desde 50, rojo por debajo.</p>
+<ul><li>La API de Google Places devuelve como máximo 10 fotos por ficha; la regla de fotos se calibra con ese tope.</li><li>No se evalúan los horarios especiales o festivos: la API solo informa de los próximos 7 días y el resultado dependería de la fecha de extracción.</li><li>Las reglas de nombre y categoría solo se aplican a marcas con al menos 3 locales evaluados.</li><li>La API de Google Places no expone la descripción que escribe el propietario de la ficha (solo un resumen editorial de Google), por lo que no se evalúa.</li><li>Un dato no disponible nunca se evalúa ni se infiere.</li><li>No se han analizado reseñas, competencia ni la web corporativa.</li></ul>
+
+<p>Fallos de extracción: ninguno.</p>
+<p>Reglas no evaluadas: Nombre inconsistente dentro de la marca en Voltereta (empate en el patrón de nombre dominante); Nombre inconsistente dentro de la marca en Begin (empate en el patrón de nombre dominante); Nombre inconsistente dentro de la marca en One Burger (la marca tiene 1 locales evaluados (mínimo 3)); Categoría distinta dentro de la marca en One Burger (la marca tiene 1 locales evaluados (mínimo 3)).</p>
+</section>
+</main>
+<script>
+(function(){
+  var tabla=document.querySelector('[data-testid="informe-tabla-locales"] table');
+  if(!tabla)return;
+  var cuerpo=tabla.tBodies[0];
+  tabla.querySelectorAll('th button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var i=+b.dataset.col,asc=b.dataset.asc!=='1';
+      tabla.querySelectorAll('th button').forEach(function(x){x.dataset.asc='0';x.parentNode.removeAttribute('aria-sort')});
+      b.dataset.asc=asc?'1':'0';b.parentNode.setAttribute('aria-sort',asc?'ascending':'descending');
+      Array.prototype.slice.call(cuerpo.rows).sort(function(x,y){
+        var p=x.cells[i].dataset.v,q=y.cells[i].dataset.v;
+        if(p===''&&q==='')return 0;if(p==='')return 1;if(q==='')return -1;
+        var n=!isNaN(p)&&!isNaN(q);
+        return (n?p-q:p.localeCompare(q,'es'))*(asc?1:-1);
+      }).forEach(function(r){cuerpo.appendChild(r)});
+    });
+  });
+})();
+</script>
+</body></html>

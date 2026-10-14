@@ -1,0 +1,361 @@
+{
+  "modo": "real",
+  "extraido": "2026-10-14T09:32:26.808Z",
+  "fuente": "Google Places API (New)",
+  "pesos": {
+    "alta": 15,
+    "media": 7,
+    "baja": 3
+  },
+  "tramos": {
+    "verde": 80,
+    "ambar": 50
+  },
+  "hallazgos": [
+    {
+      "local_id": "voltereta-valencia-01",
+      "local": "Voltereta Casa | Valencia",
+      "marca": "Voltereta",
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "severidad": "media",
+      "evidencia": "\"Voltereta Casa | Valencia\" (separador dominante: \"-\")",
+      "accion": "Unificar el nombre con el formato dominante de la marca"
+    },
+    {
+      "local_id": "voltereta-valencia-02",
+      "local": "Voltereta Bali | Valencia",
+      "marca": "Voltereta",
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "severidad": "media",
+      "evidencia": "\"Voltereta Bali | Valencia\" (separador dominante: \"-\")",
+      "accion": "Unificar el nombre con el formato dominante de la marca"
+    },
+    {
+      "local_id": "voltereta-valencia-03",
+      "local": "Voltereta Manhattan - Valencia",
+      "marca": "Voltereta",
+      "regla": "ATRIBUTO_DESAPROVECHADO",
+      "severidad": "media",
+      "evidencia": "La web declara \"terraza\" pero la ficha lo tiene marcado como no ofrecido",
+      "accion": "Marcar el atributo \"terraza\" en la ficha"
+    },
+    {
+      "local_id": "voltereta-valencia-04",
+      "local": "Voltereta Kioto | Valencia",
+      "marca": "Voltereta",
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "severidad": "media",
+      "evidencia": "\"Voltereta Kioto | Valencia\" (separador dominante: \"-\")",
+      "accion": "Unificar el nombre con el formato dominante de la marca"
+    },
+    {
+      "local_id": "voltereta-valencia-04",
+      "local": "Voltereta Kioto | Valencia",
+      "marca": "Voltereta",
+      "regla": "CATEGORIA_DISPAR",
+      "severidad": "alta",
+      "evidencia": "Categoría japanese_restaurant (dominante en Voltereta: fusion_restaurant)",
+      "accion": "Alinear la categoría principal con la de la marca"
+    },
+    {
+      "local_id": "voltereta-zaragoza-01",
+      "local": "Voltereta Nueva Zelanda",
+      "marca": "Voltereta",
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "severidad": "media",
+      "evidencia": "\"Voltereta Nueva Zelanda\" (separador dominante: \"-\")",
+      "accion": "Unificar el nombre con el formato dominante de la marca"
+    },
+    {
+      "local_id": "voltereta-cordoba-01",
+      "local": "Voltereta Toscana - Córdoba",
+      "marca": "Voltereta",
+      "regla": "CATEGORIA_DISPAR",
+      "severidad": "alta",
+      "evidencia": "Categoría italian_restaurant (dominante en Voltereta: fusion_restaurant)",
+      "accion": "Alinear la categoría principal con la de la marca"
+    },
+    {
+      "local_id": "begin-valencia-02",
+      "local": "Begin Profundidades Marinas - Valencia",
+      "marca": "Begin",
+      "regla": "ATRIBUTO_DESAPROVECHADO",
+      "severidad": "media",
+      "evidencia": "La web declara \"terraza\" pero la ficha lo tiene marcado como no ofrecido",
+      "accion": "Marcar el atributo \"terraza\" en la ficha"
+    },
+    {
+      "local_id": "begin-valencia-04",
+      "local": "Begin Huerta (Alameda)",
+      "marca": "Begin",
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "severidad": "media",
+      "evidencia": "\"Begin Huerta (Alameda)\" (separador dominante: \"-\")",
+      "accion": "Unificar el nombre con el formato dominante de la marca"
+    },
+    {
+      "local_id": "begin-sagunto-01",
+      "local": "Begin Botánico | Sagunto",
+      "marca": "Begin",
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "severidad": "media",
+      "evidencia": "\"Begin Botánico | Sagunto\" (separador dominante: \"-\")",
+      "accion": "Unificar el nombre con el formato dominante de la marca"
+    },
+    {
+      "local_id": "begin-gandia-01",
+      "local": "Begin Jungla | Gandía",
+      "marca": "Begin",
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "severidad": "media",
+      "evidencia": "\"Begin Jungla | Gandía\" (separador dominante: \"-\")",
+      "accion": "Unificar el nombre con el formato dominante de la marca"
+    },
+    {
+      "local_id": "one-burger-valencia-01",
+      "local": "One Burger",
+      "marca": "One Burger",
+      "regla": "TELEFONO_AUSENTE",
+      "severidad": "alta",
+      "evidencia": "Sin teléfono en la ficha",
+      "accion": "Añadir el teléfono del local"
+    }
+  ],
+  "locales": [
+    {
+      "local_id": "voltereta-valencia-04",
+      "local": "Voltereta Kioto | Valencia",
+      "marca": "Voltereta",
+      "ciudad": "Valencia",
+      "estado": "evaluado",
+      "score": 78,
+      "tramo": "ambar",
+      "n_hallazgos": 2
+    },
+    {
+      "local_id": "one-burger-valencia-01",
+      "local": "One Burger",
+      "marca": "One Burger",
+      "ciudad": "Valencia",
+      "estado": "evaluado",
+      "score": 85,
+      "tramo": "verde",
+      "n_hallazgos": 1
+    },
+    {
+      "local_id": "voltereta-cordoba-01",
+      "local": "Voltereta Toscana - Córdoba",
+      "marca": "Voltereta",
+      "ciudad": "Córdoba",
+      "estado": "evaluado",
+      "score": 85,
+      "tramo": "verde",
+      "n_hallazgos": 1
+    },
+    {
+      "local_id": "begin-sagunto-01",
+      "local": "Begin Botánico | Sagunto",
+      "marca": "Begin",
+      "ciudad": "Sagunto",
+      "estado": "evaluado",
+      "score": 93,
+      "tramo": "verde",
+      "n_hallazgos": 1
+    },
+    {
+      "local_id": "begin-valencia-04",
+      "local": "Begin Huerta (Alameda)",
+      "marca": "Begin",
+      "ciudad": "Valencia",
+      "estado": "evaluado",
+      "score": 93,
+      "tramo": "verde",
+      "n_hallazgos": 1
+    },
+    {
+      "local_id": "begin-gandia-01",
+      "local": "Begin Jungla | Gandía",
+      "marca": "Begin",
+      "ciudad": "Gandía",
+      "estado": "evaluado",
+      "score": 93,
+      "tramo": "verde",
+      "n_hallazgos": 1
+    },
+    {
+      "local_id": "begin-valencia-02",
+      "local": "Begin Profundidades Marinas - Valencia",
+      "marca": "Begin",
+      "ciudad": "Valencia",
+      "estado": "evaluado",
+      "score": 93,
+      "tramo": "verde",
+      "n_hallazgos": 1
+    },
+    {
+      "local_id": "voltereta-valencia-02",
+      "local": "Voltereta Bali | Valencia",
+      "marca": "Voltereta",
+      "ciudad": "Valencia",
+      "estado": "evaluado",
+      "score": 93,
+      "tramo": "verde",
+      "n_hallazgos": 1
+    },
+    {
+      "local_id": "voltereta-valencia-01",
+      "local": "Voltereta Casa | Valencia",
+      "marca": "Voltereta",
+      "ciudad": "Valencia",
+      "estado": "evaluado",
+      "score": 93,
+      "tramo": "verde",
+      "n_hallazgos": 1
+    },
+    {
+      "local_id": "voltereta-valencia-03",
+      "local": "Voltereta Manhattan - Valencia",
+      "marca": "Voltereta",
+      "ciudad": "Valencia",
+      "estado": "evaluado",
+      "score": 93,
+      "tramo": "verde",
+      "n_hallazgos": 1
+    },
+    {
+      "local_id": "voltereta-zaragoza-01",
+      "local": "Voltereta Nueva Zelanda",
+      "marca": "Voltereta",
+      "ciudad": "Zaragoza",
+      "estado": "evaluado",
+      "score": 93,
+      "tramo": "verde",
+      "n_hallazgos": 1
+    },
+    {
+      "local_id": "begin-valencia-03",
+      "local": "Begin Invernadero - Valencia",
+      "marca": "Begin",
+      "ciudad": "Valencia",
+      "estado": "evaluado",
+      "score": 100,
+      "tramo": "verde",
+      "n_hallazgos": 0
+    },
+    {
+      "local_id": "begin-valencia-05",
+      "local": "Begin Jardín Secreto - Valencia",
+      "marca": "Begin",
+      "ciudad": "Valencia",
+      "estado": "evaluado",
+      "score": 100,
+      "tramo": "verde",
+      "n_hallazgos": 0
+    },
+    {
+      "local_id": "begin-valencia-01",
+      "local": "Begin Origen - Valencia",
+      "marca": "Begin",
+      "ciudad": "Valencia",
+      "estado": "evaluado",
+      "score": 100,
+      "tramo": "verde",
+      "n_hallazgos": 0
+    },
+    {
+      "local_id": "voltereta-sevilla-01",
+      "local": "Voltereta París - Sevilla",
+      "marca": "Voltereta",
+      "ciudad": "Sevilla",
+      "estado": "evaluado",
+      "score": 100,
+      "tramo": "verde",
+      "n_hallazgos": 0
+    },
+    {
+      "local_id": "voltereta-alicante-01",
+      "local": "Voltereta Tanzania - Alicante",
+      "marca": "Voltereta",
+      "ciudad": "Alicante",
+      "estado": "evaluado",
+      "score": 100,
+      "tramo": "verde",
+      "n_hallazgos": 0
+    }
+  ],
+  "ranking_extension": [
+    {
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "locales": 7,
+      "impacto": 49,
+      "accion": "Unificar el nombre con el formato dominante de la marca"
+    },
+    {
+      "regla": "CATEGORIA_DISPAR",
+      "locales": 2,
+      "impacto": 30,
+      "accion": "Alinear la categoría principal con la de la marca"
+    },
+    {
+      "regla": "ATRIBUTO_DESAPROVECHADO",
+      "locales": 2,
+      "impacto": 14,
+      "accion": "Marcar el atributo \"terraza\" en la ficha"
+    },
+    {
+      "regla": "TELEFONO_AUSENTE",
+      "locales": 1,
+      "impacto": 15,
+      "accion": "Añadir el teléfono del local"
+    }
+  ],
+  "ranking_acciones": [
+    {
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "locales": 7,
+      "impacto": 49,
+      "accion": "Unificar el nombre con el formato dominante de la marca"
+    },
+    {
+      "regla": "CATEGORIA_DISPAR",
+      "locales": 2,
+      "impacto": 30,
+      "accion": "Alinear la categoría principal con la de la marca"
+    },
+    {
+      "regla": "TELEFONO_AUSENTE",
+      "locales": 1,
+      "impacto": 15,
+      "accion": "Añadir el teléfono del local"
+    },
+    {
+      "regla": "ATRIBUTO_DESAPROVECHADO",
+      "locales": 2,
+      "impacto": 14,
+      "accion": "Marcar el atributo \"terraza\" en la ficha"
+    }
+  ],
+  "no_evaluado": [
+    {
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "marca": "Voltereta",
+      "motivo": "empate en el patrón de nombre dominante"
+    },
+    {
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "marca": "Begin",
+      "motivo": "empate en el patrón de nombre dominante"
+    },
+    {
+      "regla": "NOMENCLATURA_INCONSISTENTE",
+      "marca": "One Burger",
+      "motivo": "la marca tiene 1 locales evaluados (mínimo 3)"
+    },
+    {
+      "regla": "CATEGORIA_DISPAR",
+      "marca": "One Burger",
+      "motivo": "la marca tiene 1 locales evaluados (mínimo 3)"
+    }
+  ],
+  "fallos": []
+}
