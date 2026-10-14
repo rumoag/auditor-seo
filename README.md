@@ -55,11 +55,12 @@ Se versionan el código, las pruebas, el inventario (`data/locales.json`, `data/
 
 Pesos por severidad: alta 15, media 7, baja 3. Tramos: verde 80-100, ámbar 50-79, rojo 0-49. Los locales sin ficha resuelta aparecen como "sin datos" y no puntúan.
 
-Reglas: campos ausentes (descripción, web, teléfono, atributos), horario ausente o incompleto, fotos insuficientes, nombre inconsistente dentro de la marca, categoría distinta dentro de la marca, web genérica y atributos que la web declara pero la ficha no marca.
+Reglas: campos ausentes (web, teléfono, atributos), horario ausente o incompleto, fotos insuficientes, nombre inconsistente dentro de la marca, categoría distinta dentro de la marca, web genérica y atributos que la web declara pero la ficha no marca.
 
 ## Limitaciones
 
 - La API devuelve como máximo 10 fotos por ficha; la regla de fotos se calibra con ese tope.
+- No se evalúa la descripción de la ficha: la API de Google Places no expone la que escribe el propietario, solo un resumen editorial de Google.
 - No se evalúan los horarios especiales o festivos: la API solo informa de los próximos 7 días y el resultado dependería de la fecha de extracción.
 - Las reglas de nombre y categoría solo se aplican a marcas con al menos 3 locales evaluados.
 - Los atributos que la web declara (`web_declara`) se han tomado de la página de cada local; la accesibilidad no aparece declarada en ninguna.

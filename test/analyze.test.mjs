@@ -26,11 +26,18 @@ test('todo hallazgo del demo tiene evidencia, acción y severidad válida', () =
 test('el demo ejercita las reglas esperadas', () => {
   const reglas = new Set(analizar(demo).hallazgos.map(h => h.regla));
   for (const esperada of [
-    'DESCRIPCION_AUSENTE', 'WEB_AUSENTE', 'TELEFONO_AUSENTE', 'ATRIBUTOS_VACIOS', 'HORARIO_AUSENTE', 'HORARIO_INCOMPLETO',
+    'WEB_AUSENTE', 'TELEFONO_AUSENTE', 'ATRIBUTOS_VACIOS', 'HORARIO_AUSENTE', 'HORARIO_INCOMPLETO',
     'FOTOS_INSUFICIENTES', 'NOMENCLATURA_INCONSISTENTE', 'CATEGORIA_DISPAR', 'WEB_GENERICA', 'ATRIBUTO_DESAPROVECHADO',
   ]) {
     assert.ok(reglas.has(esperada), `falta ${esperada}`);
   }
+});
+
+test('la descripción de la ficha no genera hallazgos (la API no expone la del propietario)', () => {
+  const { hallazgos } = analizar(demo);
+  assert.equal(hallazgos.some(h => /DESCRIPCION/.test(h.regla)), false);
+  // El fixture tiene un local sin descripción y aun así no hay hallazgo.
+  assert.ok(demo.fichas.some(f => f.campos.descripcion?.estado === 'ausente'));
 });
 
 test('el local sin datos aparece como sin_datos, sin hallazgos y al final', () => {

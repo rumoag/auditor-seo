@@ -99,6 +99,7 @@ test('la metodología declara fuente, fecha, pesos, tope de fotos, horarios espe
   assert.match(sec, /alta 15, media 7, baja 3/);
   assert.match(sec, /10 fotos/);
   assert.match(sec, /horarios especiales/);
+  assert.match(sec, /no expone la descripción que escribe el propietario/);
   assert.match(sec, /Fallos de extracción \(1\)/);
   assert.match(sec, /Reglas no evaluadas/);
   assert.match(sec, /reseñas, competencia ni la web corporativa/);

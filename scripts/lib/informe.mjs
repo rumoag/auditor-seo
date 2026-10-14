@@ -1,7 +1,6 @@
 // UT-5: modelo del informe y render HTML. Funciones puras, sin dependencias externas.
 
 const ETIQUETAS = {
-  DESCRIPCION_AUSENTE: 'Descripción ausente',
   WEB_AUSENTE: 'Web ausente',
   TELEFONO_AUSENTE: 'Teléfono ausente',
   ATRIBUTOS_VACIOS: 'Atributos sin marcar',
@@ -52,6 +51,7 @@ export function construirModelo(h) {
     'La API de Google Places devuelve como máximo 10 fotos por ficha; la regla de fotos se calibra con ese tope.',
     'No se evalúan los horarios especiales o festivos: la API solo informa de los próximos 7 días y el resultado dependería de la fecha de extracción.',
     'Las reglas de nombre y categoría solo se aplican a marcas con al menos 3 locales evaluados.',
+    'La API de Google Places no expone la descripción que escribe el propietario de la ficha (solo un resumen editorial de Google), por lo que no se evalúa.',
     'Un dato no disponible nunca se evalúa ni se infiere.',
     'No se han analizado reseñas, competencia ni la web corporativa.',
   ];

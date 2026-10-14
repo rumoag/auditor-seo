@@ -17,7 +17,7 @@ test('un local completo y coherente no genera hallazgos', () => {
 test('todo hallazgo lleva evidencia y acción', () => {
   const l = local('X', 'Uno', { descripcion: A(), web: A(), telefono: A(), horario_regular: A(), n_fotos: P(0) });
   const hs = hallazgos([l]);
-  assert.ok(hs.length >= 5);
+  assert.ok(hs.length >= 4);
   for (const h of hs) {
     assert.ok(h.evidencia.length > 0, h.regla);
     assert.ok(h.accion.length > 0, h.regla);
@@ -25,16 +25,30 @@ test('todo hallazgo lleva evidencia y acción', () => {
 });
 
 // R1
-test('R1: descripción, web y teléfono ausentes con su severidad', () => {
-  const hs = hallazgos([local('X', 'Uno', { descripcion: A(), web: A(), telefono: A() })]);
+test('R1: web y teléfono ausentes con su severidad', () => {
+  const hs = hallazgos([local('X', 'Uno', { web: A(), telefono: A() })]);
   const por = Object.fromEntries(hs.map(h => [h.regla, h.severidad]));
-  assert.equal(por.DESCRIPCION_AUSENTE, 'media');
   assert.equal(por.WEB_AUSENTE, 'alta');
   assert.equal(por.TELEFONO_AUSENTE, 'alta');
 });
 
+test('la descripción ausente no genera ningún hallazgo', () => {
+  assert.deepEqual(hallazgos([local('X', 'Uno', { descripcion: A() })]), []);
+});
+
+test('R4: la evidencia nunca contiene "undefined" cuando solo hay separador dominante', () => {
+  // Cada local tiene un nombre propio, así que el patrón empata; el separador sí tiene dominante.
+  const n = (c, nombre) => local('M', c, { nombre: P(nombre) });
+  const grupo = [n('a', 'Marca Uno - a'), n('b', 'Marca Dos - b'), n('c', 'Marca Tres - c'), n('d', 'Marca Cuatro | d')];
+  const hs = hallazgos(grupo, grupo[3], 'NOMENCLATURA_INCONSISTENTE');
+  assert.equal(hs.length, 1);
+  assert.doesNotMatch(hs[0].evidencia, /undefined/);
+  assert.match(hs[0].evidencia, /separador dominante: "-"/);
+  assert.doesNotMatch(hs[0].evidencia, /patrón más común/);
+});
+
 test('R1: un campo no_disponible no dispara la regla', () => {
-  const hs = hallazgos([local('X', 'Uno', { descripcion: N(), web: N(), telefono: N() })]);
+  const hs = hallazgos([local('X', 'Uno', { web: N(), telefono: N() })]);
   assert.deepEqual(hs, []);
 });
 

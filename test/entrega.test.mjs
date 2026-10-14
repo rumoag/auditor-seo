@@ -142,7 +142,7 @@ test('el resumen pone el hallazgo principal antes que el método', () => {
 
 test('el resumen incluye las cifras, el top 3 y las limitaciones', () => {
   const t = generarResumenEjecutivo(hallazgosReales);
-  assert.match(t, /7 locales analizados · 15 problemas accionables · score medio 77\/100/);
+  assert.match(t, /7 locales analizados · 14 problemas accionables · score medio 78\/100/);
   assert.equal((t.match(/^\d\. /gm) ?? []).length, 3);
   assert.match(t, /10 fotos/);
   assert.match(t, /solo datos públicos/i);

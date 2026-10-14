@@ -7,7 +7,6 @@ const MAPA_WEB_DECLARA = { terraza: 'outdoorSeating', reservas: 'reservable', de
 const UMBRAL_FOTOS = 5;
 
 export const ACCIONES = {
-  DESCRIPCION_AUSENTE: 'Redactar descripción de 250-750 caracteres con carta, zona y servicios',
   WEB_AUSENTE: 'Añadir la URL de la página del local',
   TELEFONO_AUSENTE: 'Añadir el teléfono del local',
   ATRIBUTOS_VACIOS: 'Completar los atributos del negocio',
@@ -90,8 +89,8 @@ export function evaluarLocal(f, ctx) {
   const hs = [];
   const info = ctx.marcas[f.marca] ?? { n: 0 };
 
-  // R1: campos ausentes
-  if (estadoDe(c.descripcion) === 'ausente') hs.push(hallazgo(f, 'DESCRIPCION_AUSENTE', 'media', 'Sin descripción en la ficha'));
+  // R1: campos ausentes. La descripción no se evalúa: la API solo expone el resumen editorial de Google,
+  // no la descripción que escribe el propietario, así que su ausencia no es una carencia de la marca.
   if (estadoDe(c.web) === 'ausente') hs.push(hallazgo(f, 'WEB_AUSENTE', 'alta', 'Sin sitio web en la ficha'));
   if (estadoDe(c.telefono) === 'ausente') hs.push(hallazgo(f, 'TELEFONO_AUSENTE', 'alta', 'Sin teléfono en la ficha'));
   const vacios = ATRIBUTOS.filter(a => estadoDe(c.atributos?.[a]) === 'ausente');
@@ -122,8 +121,11 @@ export function evaluarLocal(f, ctx) {
     const difierePatron = info.patron !== undefined && patron !== info.patron;
     const difiereSep = info.separador !== undefined && sep !== info.separador;
     if (difierePatron || difiereSep) {
-      hs.push(hallazgo(f, 'NOMENCLATURA_INCONSISTENTE', 'media',
-        `"${nombre}" (patrón más común de ${f.marca}: "${info.patron}", separador "${info.separador}")`));
+      const dominante = [
+        info.patron !== undefined ? `patrón más común de ${f.marca}: "${info.patron}"` : null,
+        info.separador !== undefined ? `separador dominante: "${info.separador}"` : null,
+      ].filter(Boolean).join(', ');
+      hs.push(hallazgo(f, 'NOMENCLATURA_INCONSISTENTE', 'media', `"${nombre}" (${dominante})`));
     }
   }
 
