@@ -1,0 +1,21 @@
+{
+  "name": "auditor-seo-local",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Auditor de fichas locales de Google con datos públicos",
+  "scripts": {
+    "test": "node --test",
+    "inventario": "node scripts/validar-inventario.mjs",
+    "inventario:estricto": "node scripts/validar-inventario.mjs --estricto",
+    "extract": "node scripts/extract.mjs",
+    "extract:dry": "node scripts/extract.mjs --dry-run",
+    "analyze": "node scripts/analyze.mjs",
+    "report": "node scripts/report.mjs",
+    "demo": "node scripts/analyze.mjs data/fixtures/fichas_demo.json --out data/hallazgos_demo.json",
+    "report:demo": "node scripts/report.mjs data/hallazgos_demo.json --out data/informe_demo.html",
+    "secretos": "node scripts/escanear-secretos.mjs",
+    "entrega:comprobar": "node scripts/comprobar-entrega.mjs",
+    "entrega:resumen": "node scripts/resumen-ejecutivo.mjs"
+  }
+}

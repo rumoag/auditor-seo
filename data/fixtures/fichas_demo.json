@@ -1,0 +1,638 @@
+{
+  "extraido": "2026-10-14T00:00:00Z",
+  "fuente": "DATOS DE EJEMPLO (ficticios)",
+  "fichas": [
+    {
+      "local_id": "marca-alfa-madrid",
+      "marca": "Marca Alfa",
+      "ciudad": "Madrid",
+      "place_id": "ficticio",
+      "web_declara": [
+        "terraza",
+        "reservas"
+      ],
+      "web_local": "https://alfa.ficticio.example/madrid",
+      "campos": {
+        "nombre": {
+          "estado": "presente",
+          "valor": "Marca Alfa - Madrid"
+        },
+        "categoria_principal": {
+          "estado": "presente",
+          "valor": "restaurant"
+        },
+        "categorias": {
+          "estado": "presente",
+          "valor": [
+            "restaurant"
+          ]
+        },
+        "direccion": {
+          "estado": "presente",
+          "valor": "Calle Ficticia 1"
+        },
+        "codigo_postal": {
+          "estado": "presente",
+          "valor": "00000"
+        },
+        "telefono": {
+          "estado": "presente",
+          "valor": "900 000 000"
+        },
+        "web": {
+          "estado": "presente",
+          "valor": "https://alfa.ficticio.example/"
+        },
+        "horario_regular": {
+          "estado": "presente",
+          "valor": [
+            "lunes: 13:00-23:00",
+            "martes: 13:00-23:00",
+            "miércoles: 13:00-23:00",
+            "jueves: 13:00-23:00",
+            "viernes: 13:00-23:00",
+            "sábado: 13:00-23:00",
+            "domingo: 13:00-23:00"
+          ]
+        },
+        "horario_especial": {
+          "estado": "ausente"
+        },
+        "n_fotos": {
+          "estado": "presente",
+          "valor": 10
+        },
+        "n_resenas": {
+          "estado": "presente",
+          "valor": 100
+        },
+        "nota": {
+          "estado": "presente",
+          "valor": 4.5
+        },
+        "descripcion": {
+          "estado": "presente",
+          "valor": "Descripción ficticia"
+        },
+        "atributos": {
+          "outdoorSeating": {
+            "estado": "presente",
+            "valor": true
+          },
+          "reservable": {
+            "estado": "presente",
+            "valor": true
+          },
+          "delivery": {
+            "estado": "presente",
+            "valor": true
+          },
+          "takeout": {
+            "estado": "presente",
+            "valor": true
+          },
+          "dineIn": {
+            "estado": "presente",
+            "valor": true
+          },
+          "accessibilityOptions": {
+            "estado": "presente",
+            "valor": {
+              "wheelchairAccessibleEntrance": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "local_id": "marca-alfa-barcelona",
+      "marca": "Marca Alfa",
+      "ciudad": "Barcelona",
+      "place_id": "ficticio",
+      "web_declara": [],
+      "campos": {
+        "nombre": {
+          "estado": "presente",
+          "valor": "Marca Alfa Barcelona"
+        },
+        "categoria_principal": {
+          "estado": "presente",
+          "valor": "hamburger_restaurant"
+        },
+        "categorias": {
+          "estado": "presente",
+          "valor": [
+            "restaurant"
+          ]
+        },
+        "direccion": {
+          "estado": "presente",
+          "valor": "Calle Ficticia 1"
+        },
+        "codigo_postal": {
+          "estado": "presente",
+          "valor": "00000"
+        },
+        "telefono": {
+          "estado": "ausente"
+        },
+        "web": {
+          "estado": "presente",
+          "valor": "https://alfa.ficticio.example/"
+        },
+        "horario_regular": {
+          "estado": "presente",
+          "valor": [
+            "lunes: 13:00-23:00",
+            "martes: 13:00-23:00",
+            "miércoles: 13:00-23:00",
+            "jueves: 13:00-23:00",
+            "viernes: 13:00-23:00",
+            "sábado: 13:00-23:00",
+            "domingo: 13:00-23:00"
+          ]
+        },
+        "horario_especial": {
+          "estado": "ausente"
+        },
+        "n_fotos": {
+          "estado": "presente",
+          "valor": 2
+        },
+        "n_resenas": {
+          "estado": "presente",
+          "valor": 100
+        },
+        "nota": {
+          "estado": "presente",
+          "valor": 4.5
+        },
+        "descripcion": {
+          "estado": "ausente"
+        },
+        "atributos": {
+          "outdoorSeating": {
+            "estado": "presente",
+            "valor": true
+          },
+          "reservable": {
+            "estado": "presente",
+            "valor": true
+          },
+          "delivery": {
+            "estado": "presente",
+            "valor": true
+          },
+          "takeout": {
+            "estado": "presente",
+            "valor": true
+          },
+          "dineIn": {
+            "estado": "presente",
+            "valor": true
+          },
+          "accessibilityOptions": {
+            "estado": "presente",
+            "valor": {
+              "wheelchairAccessibleEntrance": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "local_id": "marca-alfa-valencia",
+      "marca": "Marca Alfa",
+      "ciudad": "Valencia",
+      "place_id": "ficticio",
+      "web_declara": [
+        "reservas"
+      ],
+      "campos": {
+        "nombre": {
+          "estado": "presente",
+          "valor": "Marca Alfa - Valencia"
+        },
+        "categoria_principal": {
+          "estado": "presente",
+          "valor": "restaurant"
+        },
+        "categorias": {
+          "estado": "presente",
+          "valor": [
+            "restaurant"
+          ]
+        },
+        "direccion": {
+          "estado": "presente",
+          "valor": "Calle Ficticia 1"
+        },
+        "codigo_postal": {
+          "estado": "presente",
+          "valor": "00000"
+        },
+        "telefono": {
+          "estado": "presente",
+          "valor": "900 000 000"
+        },
+        "web": {
+          "estado": "presente",
+          "valor": "https://alfa.ficticio.example/"
+        },
+        "horario_regular": {
+          "estado": "ausente"
+        },
+        "horario_especial": {
+          "estado": "ausente"
+        },
+        "n_fotos": {
+          "estado": "presente",
+          "valor": 0
+        },
+        "n_resenas": {
+          "estado": "presente",
+          "valor": 100
+        },
+        "nota": {
+          "estado": "presente",
+          "valor": 4.5
+        },
+        "descripcion": {
+          "estado": "presente",
+          "valor": "Descripción ficticia"
+        },
+        "atributos": {
+          "outdoorSeating": {
+            "estado": "presente",
+            "valor": true
+          },
+          "reservable": {
+            "estado": "ausente"
+          },
+          "delivery": {
+            "estado": "ausente"
+          },
+          "takeout": {
+            "estado": "ausente"
+          },
+          "dineIn": {
+            "estado": "ausente"
+          },
+          "accessibilityOptions": {
+            "estado": "presente",
+            "valor": {
+              "wheelchairAccessibleEntrance": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "local_id": "marca-alfa-sevilla",
+      "marca": "Marca Alfa",
+      "ciudad": "Sevilla",
+      "place_id": "ficticio",
+      "web_declara": [],
+      "campos": {
+        "nombre": {
+          "estado": "presente",
+          "valor": "Marca Alfa - Sevilla"
+        },
+        "categoria_principal": {
+          "estado": "presente",
+          "valor": "restaurant"
+        },
+        "categorias": {
+          "estado": "presente",
+          "valor": [
+            "restaurant"
+          ]
+        },
+        "direccion": {
+          "estado": "presente",
+          "valor": "Calle Ficticia 1"
+        },
+        "codigo_postal": {
+          "estado": "presente",
+          "valor": "00000"
+        },
+        "telefono": {
+          "estado": "presente",
+          "valor": "900 000 000"
+        },
+        "web": {
+          "estado": "presente",
+          "valor": "https://alfa.ficticio.example/"
+        },
+        "horario_regular": {
+          "estado": "presente",
+          "valor": [
+            "lunes: 13:00-23:00",
+            "martes: 13:00-23:00",
+            "miércoles: 13:00-23:00",
+            "jueves: 13:00-23:00",
+            "viernes: 13:00-23:00",
+            "sábado: 13:00-23:00"
+          ]
+        },
+        "horario_especial": {
+          "estado": "ausente"
+        },
+        "n_fotos": {
+          "estado": "presente",
+          "valor": 10
+        },
+        "n_resenas": {
+          "estado": "presente",
+          "valor": 100
+        },
+        "nota": {
+          "estado": "presente",
+          "valor": 4.5
+        },
+        "descripcion": {
+          "estado": "presente",
+          "valor": "Descripción ficticia"
+        },
+        "atributos": {
+          "outdoorSeating": {
+            "estado": "presente",
+            "valor": true
+          },
+          "reservable": {
+            "estado": "presente",
+            "valor": true
+          },
+          "delivery": {
+            "estado": "presente",
+            "valor": true
+          },
+          "takeout": {
+            "estado": "presente",
+            "valor": true
+          },
+          "dineIn": {
+            "estado": "presente",
+            "valor": true
+          },
+          "accessibilityOptions": {
+            "estado": "presente",
+            "valor": {
+              "wheelchairAccessibleEntrance": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "local_id": "beta-grill-bilbao",
+      "marca": "Beta Grill",
+      "ciudad": "Bilbao",
+      "place_id": "ficticio",
+      "web_declara": [],
+      "campos": {
+        "nombre": {
+          "estado": "presente",
+          "valor": "Beta Grill"
+        },
+        "categoria_principal": {
+          "estado": "presente",
+          "valor": "restaurant"
+        },
+        "categorias": {
+          "estado": "presente",
+          "valor": [
+            "restaurant"
+          ]
+        },
+        "direccion": {
+          "estado": "presente",
+          "valor": "Calle Ficticia 1"
+        },
+        "codigo_postal": {
+          "estado": "presente",
+          "valor": "00000"
+        },
+        "telefono": {
+          "estado": "presente",
+          "valor": "900 000 000"
+        },
+        "web": {
+          "estado": "presente",
+          "valor": "https://beta.ficticio.example/bilbao"
+        },
+        "horario_regular": {
+          "estado": "presente",
+          "valor": [
+            "lunes: 13:00-23:00",
+            "martes: 13:00-23:00",
+            "miércoles: 13:00-23:00",
+            "jueves: 13:00-23:00",
+            "viernes: 13:00-23:00",
+            "sábado: 13:00-23:00",
+            "domingo: 13:00-23:00"
+          ]
+        },
+        "horario_especial": {
+          "estado": "ausente"
+        },
+        "n_fotos": {
+          "estado": "presente",
+          "valor": 8
+        },
+        "n_resenas": {
+          "estado": "presente",
+          "valor": 100
+        },
+        "nota": {
+          "estado": "presente",
+          "valor": 4.5
+        },
+        "descripcion": {
+          "estado": "presente",
+          "valor": "Descripción ficticia"
+        },
+        "atributos": {
+          "outdoorSeating": {
+            "estado": "presente",
+            "valor": true
+          },
+          "reservable": {
+            "estado": "presente",
+            "valor": true
+          },
+          "delivery": {
+            "estado": "presente",
+            "valor": true
+          },
+          "takeout": {
+            "estado": "presente",
+            "valor": true
+          },
+          "dineIn": {
+            "estado": "presente",
+            "valor": true
+          },
+          "accessibilityOptions": {
+            "estado": "presente",
+            "valor": {
+              "wheelchairAccessibleEntrance": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "local_id": "beta-grill-zaragoza",
+      "marca": "Beta Grill",
+      "ciudad": "Zaragoza",
+      "place_id": "ficticio",
+      "web_declara": [],
+      "campos": {
+        "nombre": {
+          "estado": "presente",
+          "valor": "Beta Grill - Zaragoza"
+        },
+        "categoria_principal": {
+          "estado": "presente",
+          "valor": "restaurant"
+        },
+        "categorias": {
+          "estado": "presente",
+          "valor": [
+            "restaurant"
+          ]
+        },
+        "direccion": {
+          "estado": "presente",
+          "valor": "Calle Ficticia 1"
+        },
+        "codigo_postal": {
+          "estado": "presente",
+          "valor": "00000"
+        },
+        "telefono": {
+          "estado": "presente",
+          "valor": "900 000 000"
+        },
+        "web": {
+          "estado": "ausente"
+        },
+        "horario_regular": {
+          "estado": "presente",
+          "valor": [
+            "lunes: 13:00-23:00",
+            "martes: 13:00-23:00",
+            "miércoles: 13:00-23:00",
+            "jueves: 13:00-23:00",
+            "viernes: 13:00-23:00",
+            "sábado: 13:00-23:00",
+            "domingo: 13:00-23:00"
+          ]
+        },
+        "horario_especial": {
+          "estado": "ausente"
+        },
+        "n_fotos": {
+          "estado": "presente",
+          "valor": 9
+        },
+        "n_resenas": {
+          "estado": "presente",
+          "valor": 100
+        },
+        "nota": {
+          "estado": "presente",
+          "valor": 4.5
+        },
+        "descripcion": {
+          "estado": "presente",
+          "valor": "Descripción ficticia"
+        },
+        "atributos": {
+          "outdoorSeating": {
+            "estado": "presente",
+            "valor": true
+          },
+          "reservable": {
+            "estado": "presente",
+            "valor": true
+          },
+          "delivery": {
+            "estado": "presente",
+            "valor": true
+          },
+          "takeout": {
+            "estado": "presente",
+            "valor": true
+          },
+          "dineIn": {
+            "estado": "presente",
+            "valor": true
+          },
+          "accessibilityOptions": {
+            "estado": "presente",
+            "valor": {
+              "wheelchairAccessibleEntrance": true
+            }
+          }
+        }
+      }
+    },
+    {
+      "local_id": "marca gamma-murcia",
+      "marca": "Marca Gamma",
+      "ciudad": "Murcia",
+      "place_id": "ficticio",
+      "web_declara": [],
+      "campos": {
+        "nombre": {
+          "estado": "no_disponible"
+        },
+        "categoria_principal": {
+          "estado": "no_disponible"
+        },
+        "categorias": {
+          "estado": "no_disponible"
+        },
+        "direccion": {
+          "estado": "no_disponible"
+        },
+        "codigo_postal": {
+          "estado": "no_disponible"
+        },
+        "telefono": {
+          "estado": "no_disponible"
+        },
+        "web": {
+          "estado": "no_disponible"
+        },
+        "horario_regular": {
+          "estado": "no_disponible"
+        },
+        "horario_especial": {
+          "estado": "no_disponible"
+        },
+        "n_fotos": {
+          "estado": "no_disponible"
+        },
+        "n_resenas": {
+          "estado": "no_disponible"
+        },
+        "nota": {
+          "estado": "no_disponible"
+        },
+        "descripcion": {
+          "estado": "no_disponible"
+        },
+        "atributos": {}
+      }
+    }
+  ],
+  "fallos": [
+    {
+      "local_id": "marca-gamma-murcia",
+      "motivo": "ficha no resuelta (ejemplo)"
+    }
+  ]
+}

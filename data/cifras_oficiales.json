@@ -1,0 +1,23 @@
+{
+  "Voltereta": {
+    "anunciado": null,
+    "listados_en_web": 8,
+    "fuente": "https://www.volteretarestaurante.com/es/ubicaciones-horarios",
+    "consultado": "2026-10-14",
+    "nota": "La web no anuncia un número total; se contaron las tarjetas de locales listadas. Es el mismo origen que el borrador, así que no sirve como contraste independiente."
+  },
+  "Begin": {
+    "anunciado": null,
+    "listados_en_web": 7,
+    "fuente": "https://beginrestaurante.com/",
+    "consultado": "2026-10-14",
+    "nota": "La web no anuncia un número total; se contaron los locales listados. Misma salvedad que Voltereta."
+  },
+  "One Burger": {
+    "anunciado": null,
+    "listados_en_web": 1,
+    "fuente": "https://www.volteretarestaurante.com/es/ubicaciones-horarios",
+    "consultado": "2026-10-14",
+    "nota": "Solo aparece un local (Laundry Edition) en la web de Voltereta; no se ha localizado una web propia de One Burger."
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.*
+.vercel/
+entrega/
+data/hallazgos_demo.json
+data/informe_demo.html
